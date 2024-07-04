@@ -25,9 +25,12 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.css",
+              "src/variables.css"
             ],
-            "scripts": []
+            "scripts": [
+              "node_modules/coherent-gameface-interaction-manager/dist/interaction-manager.min.js"
+            ]
           },
           "configurations": {
             "production": {
