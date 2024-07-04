@@ -1,0 +1,17 @@
+<nav class="flex-center">
+    <!-- TODO: To make it @for -->
+    <ul class="flex-center">
+        <li class="controlls" (click)="onNavItemClick($event)" #option></li>
+        <!-- use @for to generate li option items -->
+        @for(option of navOptions; track navOptions) {
+            <li [ngClass]="{'box': true, 'selected': option.isSelected, 'untouched': option.isUntouched}" (click)="onNavItemClick($event)" #option>{{option.title}}</li>
+        }
+        <!-- <li class="options untouched" (click)="onNavItemClick($event)" #option>INVENTORY</li>
+        <li class="options selected untouched" (click)="onNavItemClick($event)" #option>CRAFTING</li>
+        <li class="options" (click)="onNavItemClick($event)" #option>MAP</li>
+        <li class="options" (click)="onNavItemClick($event)" #option>QUESTS</li>
+        <li class="options" (click)="onNavItemClick($event)" #option>NOTEBOOK</li> -->
+        <li class="controlls" (click)="onNavItemClick($event)" #option></li>
+    </ul>
+</nav>
+<router-outlet />
